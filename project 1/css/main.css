@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+:root {
+  --font-color: rgb(41, 38, 182);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #e1edfc;
+}
+
+.panel {
+  height: 40vw;
+  width: 80vw;
+  margin: auto;
+  background: #f0f6ff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 38px 34px -16px #bcc3ec;
+          box-shadow: 3px 38px 34px -16px #bcc3ec;
+}
+
+.panel header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.5rem;
+  font-family: arial;
+}
+
+.panel header .logo-container {
+  color: #2926b6;
+  font-size: 2rem;
+  padding: 1em;
+}
+
+.panel header nav .nav-list {
+  background: red;
+}
+
+.panel header nav .nav-list .nav-list__item {
+  display: inline-block;
+  padding: 1em;
+}
+
+.panel header nav .nav-list .nav-list__item .nav-list__link {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.panel header .phone-number {
+  padding: 1em;
+}
+
+.panel header .phone-number .phone-number__link {
+  text-decoration: none;
+}
+
+.panel .text-box {
+  position: relative;
+  padding: 5em 5em;
+  font-family: arial;
+  color: var(--font-color);
+  width: 50%;
+}
+
+.panel .text-box h1 {
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  font-family: 'Poppins', arial, sans-serif;
+}
+
+.panel .text-box p {
+  font-size: 1rem;
+}
+
+.panel .text-box .btn {
+  margin-top: 2em;
+  border-radius: 25px;
+  padding: 0.75em 2em;
+  background: red;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.panel .text-box .btn--quote {
+  background: #242cbf;
+  -webkit-box-shadow: 0 0 0 10px darkblue;
+          box-shadow: 0 0 0 10px darkblue;
+}
+
+.panel .text-box .btn--learn {
+  background: #ffcc57;
+  margin-left: 1em;
+}
+/*# sourceMappingURL=main.css.map */

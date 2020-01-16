@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+:root {
+    --font-color: rgb(41, 38, 182);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: rgb(225, 237, 252);
+}
+
+.panel {
+    height: 40vw;
+    width: 80vw;
+    margin: auto;
+    background: rgb(240, 246, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    box-shadow: 3px 38px 34px -16px rgba(188, 195, 236, 1);
+    header {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        font-family: arial;
+        .logo-container {
+            color: rgb(41, 38, 182);
+            font-size: 2rem;
+            padding: 1em;
+        }
+        nav {
+            .nav-list {
+                background: red;
+                .nav-list__item {
+                    display: inline-block;
+                    padding: 1em;
+                    .nav-list__link {
+                        text-decoration: none;
+                        color: var(--font-color);
+                    }
+                }
+            }
+        }
+        .phone-number {
+            padding: 1em;
+            .phone-number__link {
+                text-decoration: none;
+            }
+        }
+    }
+    .text-box {
+        position: relative;
+        padding: 5em 5em;
+        font-family: arial;
+        color: var(--font-color);
+        width: 50%;
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 0.05em;
+            font-family: 'Poppins', arial, sans-serif;
+        }
+        p {
+            font-size: 1rem;
+        }
+        .btn {
+            margin-top: 2em;
+            border-radius: 25px;
+            padding: 0.75em 2em;
+            background: red;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            display: inline-block;
+            &--quote {
+                background: rgb(36, 44, 191);
+                box-shadow: 0 0 0 10px darkblue;
+            }
+            &--learn {
+                background: rgb(255, 204, 87);
+                margin-left: 1em;
+            }
+        }
+    }
+}
