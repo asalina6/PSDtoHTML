@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
 :root {
   --font-color: rgb(41, 38, 182);
+  --bg-color:rgb(225, 237, 252);
+  --panel-color:rgb(240, 246, 255);
+  --quote-color:rgb(0, 95, 254);
+  --learn-color:rgb(255, 204, 87);
+  --font-night-color:white;
+  --bg-night-color:rgb(230,168,255);
+  --panel-night-color:rgb(52,0,104);
+  --quote-night-color:rgb(185, 37, 222);
+  --learn-night-color:rgb(222,115,37);
+  --box-shadow:0px 5px 0px 0px darkblue;
+  --box-night-shadow:0px 5px 0px 0px rgb(16,0,31);
+  --panel-shadow:3px 38px 34px -16px rgba(188, 195, 236, 1);
+  --panel-night-shadow:3px 38px 34px -16px rgba(95, 39, 144, 1);
 }
 
 * {
@@ -18,22 +31,24 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background: #e1edfc;
+  background: var(--bg-color);
+  line-height: 1.4;
 }
 
 .panel {
-  height: 40vw;
+  height: 75vh;
   width: 80vw;
   margin: auto;
-  background: #f0f6ff;
+  background: var(--panel-color);
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 5px;
-  -webkit-box-shadow: 3px 38px 34px -16px #bcc3ec;
-          box-shadow: 3px 38px 34px -16px #bcc3ec;
+  -webkit-box-shadow: var(--panel-shadow);
+          box-shadow: var(--panel-shadow);
+  overflow: auto;
 }
 
 .panel header {
@@ -50,16 +65,17 @@ body {
           justify-content: space-between;
   font-size: 1.5rem;
   font-family: arial;
+  font-weight: bold;
 }
 
 .panel header .logo-container {
-  color: #2926b6;
-  font-size: 2rem;
-  padding: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .panel header nav .nav-list {
-  background: red;
+  background: transparent;
 }
 
 .panel header nav .nav-list .nav-list__item {
@@ -72,17 +88,76 @@ body {
   color: var(--font-color);
 }
 
+.panel header .toggle-light {
+  margin: auto;
+}
+
+.panel header .toggle-light .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.panel header .toggle-light .switch input {
+  width: 0;
+  opacity: 0;
+  height: 0;
+}
+
+.panel header .toggle-light .switch input:checked + .slider {
+  background: var(--bg-night-color);
+}
+
+.panel header .toggle-light .switch input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+  background: var(--panel-night-color);
+}
+
+.panel header .toggle-light .switch .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.panel header .toggle-light .switch .slider.round {
+  border-radius: 34px;
+}
+
+.panel header .toggle-light .switch .slider.round::before {
+  border-radius: 50%;
+}
+
+.panel header .toggle-light .switch .slider::before {
+  content: '';
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
 .panel header .phone-number {
   padding: 1em;
 }
 
 .panel header .phone-number .phone-number__link {
   text-decoration: none;
+  color: var(--font-color);
 }
 
 .panel .text-box {
   position: relative;
-  padding: 5em 5em;
+  padding: 1em;
+  margin-left: 3em;
   font-family: arial;
   color: var(--font-color);
   width: 50%;
@@ -96,28 +171,63 @@ body {
 
 .panel .text-box p {
   font-size: 1rem;
+  line-height: 2;
 }
 
 .panel .text-box .btn {
   margin-top: 2em;
   border-radius: 25px;
-  padding: 0.75em 2em;
-  background: red;
+  padding: 1em 2em;
   font-weight: 700;
   color: white;
   letter-spacing: 0.05em;
   text-decoration: none;
   display: inline-block;
+  border: 1px solid white;
 }
 
 .panel .text-box .btn--quote {
-  background: #242cbf;
-  -webkit-box-shadow: 0 0 0 10px darkblue;
-          box-shadow: 0 0 0 10px darkblue;
+  background: var(--quote-color);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
 }
 
 .panel .text-box .btn--learn {
-  background: #ffcc57;
+  background: var(--learn-color);
   margin-left: 1em;
+}
+
+.panel .background-image {
+  background-color: transparent;
+  background-image: url("/light-rightside.png");
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 85px;
+  right: 10px;
+}
+
+.panel .design {
+  opacity: .1;
+  color: var(--font-color);
+  font-size: 4rem;
+  font-family: arial;
+  font-weight: bold;
+  position: absolute;
+  bottom: 6%;
+  left: 7%;
+}
+
+.panel .development {
+  color: var(--panel-color);
+  text-shadow: 0px 0px 3px var(--font-color);
+  font-size: 5rem;
+  font-family: arial;
+  font-weight: bold;
+  position: absolute;
+  bottom: 5%;
+  right: 1%;
+  letter-spacing: 3px;
 }
 /*# sourceMappingURL=main.css.map */

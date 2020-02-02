@@ -607,7 +607,7 @@ footer .locations p {
 
 .promise-flex {
   width: 100%;
-  height: 100vh;
+  height: 125vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -623,8 +623,23 @@ footer .locations p {
 }
 
 .promise-flex .top-promise {
-  background: red;
+  background: white;
   text-align: center;
+  margin-bottom: 7em;
+  margin-top: 7em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.promise-flex .top-promise h2 {
+  font-size: 3rem;
+  margin-bottom: 2em;
+}
+
+.promise-flex .top-promise p {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .promise-flex .left-right-flex {
@@ -638,18 +653,22 @@ footer .locations p {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
 }
 
 .promise-flex .left-right-flex .left-promise {
-  background: gray;
+  background: white;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  width: 50%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .promise-flex .left-right-flex .left-promise .card {
@@ -674,9 +693,42 @@ footer .locations p {
   -webkit-box-shadow: 12px 20.785px 59px 0px rgba(141, 167, 199, 0.46);
           box-shadow: 12px 20.785px 59px 0px rgba(141, 167, 199, 0.46);
   width: 75%;
+  border: solid black 1px;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-transition: -webkit-box-shadow 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  transition: -webkit-box-shadow 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  transition: box-shadow 400ms ease-in-out, transform 400ms ease-in-out;
+  transition: box-shadow 400ms ease-in-out, transform 400ms ease-in-out, -webkit-box-shadow 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+}
+
+.promise-flex .left-right-flex .left-promise .card h3 {
+  font-size: 1.5rem;
+}
+
+.promise-flex .left-right-flex .left-promise .card p {
+  font-size: 1.2rem;
+}
+
+.promise-flex .left-right-flex .left-promise .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 12px 20.785px 100px 0px rgba(141, 167, 199, 0.46);
+          box-shadow: 12px 20.785px 100px 0px rgba(141, 167, 199, 0.46);
 }
 
 .promise-flex .left-right-flex .right-promise {
-  background: orange;
+  width: 50%;
+  background-image: url("https://massimo-group.com/wp-content/uploads/2018/12/group-businesspeople-having-meeting-conference-room-people-working-together-ss-Feature.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-origin: border-box;
+  background-size: cover;
+  opacity: .5;
+}
+
+.promise-flex .left-right-flex .right-promise.blurred {
+  -webkit-box-shadow: 0 0 8px 8px white inset;
+          box-shadow: 0 0 8px 8px white inset;
 }
 /*# sourceMappingURL=main.css.map */
