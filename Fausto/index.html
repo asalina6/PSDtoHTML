@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
+<!--Inspiration: https://www.scorpion.co/ around December-->
 <head>
     <meta name="author" content="Armando Salinas">
     <meta name="keywords" content="">
@@ -15,11 +15,40 @@
 </head>
 
 <body>
+    <div class="expert__modal">
+        <div class="expert__modal--content">
+            Book a Free Consultation
+            <form>
+                <div>
+                    <label for="firstname">First Name<span title="required">*</span></label>
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+                </div>
+                <div>
+                    <label for="lastname">Last Name<span title="required">*</span></label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+                </div>
+                <div>
+                    <label for="businessname">Business Name<span title="required">*</span></label>
+                    <input type="text" id="businessname" name="businessname" placeholder="Business Name" required>
+                </div>
+                <div>
+                    <label for="email">Business Emai <span title="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Business Email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone<span title="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                </div>
+                <a href="#" class="btn contact"> CONTINUE</a>
+            </form>
+        </div>
+    </div>
     <header>
         <nav>
             <div class="logo-container">
                 <a class="logo-link" href="#">
-                    <img src="https://dl424urjelmef.cloudfront.net/images/branding/vertical-logos/logo-light-corporate.png" alt="scorpion">
+                    <img src="./img/logo_alpha.png" alt="SalForce">
+                    <!-- used GIMP2 to make alpha background-->
                 </a>
             </div>
             <ul class="nav--list">
@@ -62,10 +91,10 @@
         <div class="partners__info">
             <h2 class="spacedGray">SOME OF OUR PARTNERS</h2>
             <ul class="partners__list">
-                <li class="partners__list--item"><img src="https://dl424urjelmef.cloudfront.net/images/brands/facebook_logo.png" alt="facebook"> </li>
-                <li class="partners__list--item"><img src="https://dl424urjelmef.cloudfront.net/images/brands/bing-logo.png" alt="bing"> </li>\
-                <li class="partners__list--item"><img src="https://dl424urjelmef.cloudfront.net/images/brands/yahoo.png" alt="yahoo"> </li>
-                <li class="partners__list--item"><img src="https://dl424urjelmef.cloudfront.net/images/brands/Yelp_Logo.png" alt="yelp"> </li>
+                <li class="partners__list--item"><img src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/07/sdffdsafsdf-1200x604.png" alt="facebook"> </li>
+                <li class="partners__list--item"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Bing_logo.svg" alt="bing"> </li>
+                <li class="partners__list--item"><img src="https://assets.fontsinuse.com/static/use-media-items/15/14246/full-2048x768/56fc6e1d/Yahoo_Logo.png?resolution=0" alt="yahoo"> </li>
+                <li class="partners__list--item"><img src="https://www.modernfamilylaw.com/wp-content/uploads/2019/02/yelp-logo-transparent-background-4.png" alt="yelp"> </li>
 
             </ul>
         </div>
@@ -99,7 +128,7 @@
     <section class="promise">
         <div class="centering-div promise-flex">
             <div class="top-promise">
-                <h2>The <strong>Scorpion Promise</strong></h2>
+                <h2>The <strong>SalForce Promise</strong></h2>
                 <p>You want a partner who makes your life easier -- someone who will remove barriers and produce results, so you can accomplish your goals. When working with us, <strong>we promise you will:</strong></p>
             </div>
             <div class="left-right-flex">
@@ -138,27 +167,28 @@
 
 
 
-    <footer>
-        <div class="contact-number">1800</div>
+    <footer class="centering-div">
+        <div class="contact-number"><span class="normal-font black-font">Get </span><span class="black-font bold-font">In Touch</span><br><br>
+            <a href="tel:4802734908">480.273.4908</a></div>
         <ul class="locations">
-            <li>
+            <li class="locations__item">
                 <strong>California</strong>
-                <p>27750 Entertainment Drive</p>
-                <p>Valencia, CA 91355</p>
+                <p>11111 Hollywood Dr.</p>
+                <p>Hollywood, CA 90028</p>
                 <a href="#">map + directions</a>
             </li>
-            <li>
+            <li  class="locations__item">
                 <strong>Texas</strong>
-                <p>5040 Addison Circle</p>
+                <p>11111 Addison St.</p>
                 <p>Suite 300</p>
-                <p>Addison, TX 75001</p>
+                <p>Austin, TX 73301</p>
                 <a href="#">map + directions</a>
             </li>
-            <li>
+            <li  class="locations__item">
                 <strong>New York</strong>
-                <p>1 Computer Associates Plaza</p>
-                <p>Suite 105</p>
-                <p>Islandia, NY 11749</p>
+                <p>1 Sun Plaza</p>
+                <p>Suite 101</p>
+                <p>New York City, NY 10001</p>
                 <a href="#">map + directions</a>
             </li>
 

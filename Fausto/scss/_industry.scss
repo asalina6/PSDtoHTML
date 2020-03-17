@@ -1,0 +1,81 @@
+.industry {
+    position: relative;
+    .normal-font {
+        position: absolute;
+        top: -100%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        font-size: 1.2rem;
+        letter-spacing: 0.1em;
+    }
+    .industry-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: space-around;
+        align-items: stretch;
+        font-family: 'Montserrat', sans-serif;
+        .industry-list__item {
+            background: white;
+            flex: 1 1 0;
+            text-align: center;
+            .industry-list__link {
+                text-decoration: none;
+                width: 100%;
+                height: 100%;
+                display: block;
+                padding: 1em;
+                color: black;
+                font-weight: 600;
+                z-index: 1;
+                position: relative;
+                box-shadow: inset 1px 0 0 0 #cbcbcb;
+                transition: color 200ms ease;
+                &:hover {
+                    color: white;
+                    z-index: 10000;
+                }
+            }
+            .hover- {
+                &blue::before {
+                    background: blue;
+                }
+                &teal::before {
+                    background: teal;
+                }
+                &purple::before {
+                    background: purple;
+                }
+                &green::before {
+                    background: green;
+                }
+                &orange::before {
+                    background: orange;
+                }
+                &pink::before {
+                    background: pink;
+                }
+            }
+            .industry-hover {
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 100%;
+                    position: absolute;
+                    height: .3em;
+                    display: block;
+                    bottom: 0;
+                    left: 0;
+                    transition: height 200ms ease;
+                    z-index: -1;
+                }
+                &:hover {
+                    &::before {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
