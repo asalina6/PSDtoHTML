@@ -1,6 +1,6 @@
 window.onload=(function(){
 
-    var checkbox = document.querySelector('input'),
+    var checkbox = document.querySelector('input[type=checkbox]'),
         Logo = document.querySelector('#logo'),
         rightSide = document.querySelector('.background-image'),
         //day colors/images
@@ -27,6 +27,7 @@ window.onload=(function(){
     checkbox.addEventListener('click',isClicked);
 
 
+    //When the input is clicked, then we check if it is checked or not. If checked, we change it to a night theme. otherwise, day theme.
     function isClicked(event){
         if(event.target.checked==true){
             document.documentElement.style.setProperty('--font-color', nightFont);
@@ -38,7 +39,6 @@ window.onload=(function(){
             document.documentElement.style.setProperty('--panel-shadow', nightPanelShadow);
             Logo.src=nightLogoPath;
             rightSide.style.backgroundImage =`url(${nightRightPath})`;
-
         }else{
             document.documentElement.style.setProperty('--font-color',dayFont);
             document.documentElement.style.setProperty('--panel-color',dayPanel);
@@ -51,7 +51,4 @@ window.onload=(function(){
             rightSide.style.backgroundImage =`url(${dayRightPath})`;
         }
     }
-
-
-
 })();

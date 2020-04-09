@@ -12,9 +12,25 @@
 </head>
 
 <body>
-    <div class="grid-container">
-
-        <div class="panel">
+    <div class="modal">
+        <div class="modal-content">
+            <form>
+                <div>
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname">
+                </div>
+                <div>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel">
             <header>
                 <div class="logo-container">
                     <img id="logo" src="light-logo.png" height="50px" width="50px">
@@ -57,9 +73,6 @@
             <p class="development">
                 Development
             </p>
-
-
-        </div>
     </div>
     <script src="js/main.js"></script>
 </body>

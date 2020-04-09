@@ -230,4 +230,23 @@ body {
   right: 1%;
   letter-spacing: 3px;
 }
+
+.modal {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.modal .modal-content {
+  background: blue;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  height: 250px;
+  width: 250px;
+}
 /*# sourceMappingURL=main.css.map */
