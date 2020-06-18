@@ -1,8 +1,12 @@
 window.onload=(function(){
-
+        //selecting dom elements 
     var checkbox = document.querySelector('input[type=checkbox]'),
         Logo = document.querySelector('#logo'),
         rightSide = document.querySelector('.background-image'),
+        closeModalButton = document.querySelector('#modal-close'),
+        getQuote = document.querySelector('.btn--quote'),
+        modal = document.querySelector('.modal'),
+        modalContent = document.querySelector('.modal-content');
         //day colors/images
         dayFont = getComputedStyle(document.documentElement).getPropertyValue('--font-color'),
         dayPanel = getComputedStyle(document.documentElement).getPropertyValue('--panel-color'),
@@ -24,7 +28,9 @@ window.onload=(function(){
         nightLogoPath='night-logo.png',
         nightRightPath = '/night-rightside.png';
 
-    checkbox.addEventListener('click',isClicked);
+    checkbox.addEventListener('click',isClicked,false);
+    closeModalButton.addEventListener('click',closeModal,false);
+    getQuote.addEventListener('click',openModal,false);
 
 
     //When the input is clicked, then we check if it is checked or not. If checked, we change it to a night theme. otherwise, day theme.
@@ -50,5 +56,22 @@ window.onload=(function(){
             Logo.src=dayLogoPath;
             rightSide.style.backgroundImage =`url(${dayRightPath})`;
         }
+    }
+
+    //
+    function closeModal(event){
+        //modal.style.display='none';
+        modalContent.style.animationName = 'disappear';
+        modalContent.style.animationDuration = '2s';
+        modal.style.background = 'transparent';
+        setTimeout(function(){
+            modal.style.display = 'none';
+        },1500);
+    }
+    function openModal(event){
+        modal.style.display='block';
+        modalContent.style.animationName = 'appear';
+        modalContent.style.animationDuration = '2s';
+        modal.style.background = 'rgba(0,0,0,.6)';
     }
 })();

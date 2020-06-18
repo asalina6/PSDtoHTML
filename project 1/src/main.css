@@ -81,24 +81,11 @@ body {
 .panel header nav .nav-list .nav-list__item {
   display: inline-block;
   padding: 1em;
-  position: relative;
 }
 
 .panel header nav .nav-list .nav-list__item .nav-list__link {
   text-decoration: none;
   color: var(--font-color);
-  position: relative;
-}
-
-.panel header nav .nav-list .nav-list__item .nav-list__link::after {
-  content: ' ';
-  display: block;
-  height: 5px;
-  background: red;
-  color: red;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 .panel header .toggle-light {
@@ -244,50 +231,6 @@ body {
   letter-spacing: 3px;
 }
 
-@-webkit-keyframes appear {
-  from {
-    opacity: 0;
-    left: 0;
-  }
-  to {
-    opacity: 1;
-    left: 1;
-  }
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    left: 0;
-  }
-  to {
-    opacity: 1;
-    left: 1;
-  }
-}
-
-@-webkit-keyframes disappear {
-  from {
-    opacity: 1;
-    top: 50%;
-  }
-  to {
-    opacity: 0;
-    top: 0;
-  }
-}
-
-@keyframes disappear {
-  from {
-    opacity: 1;
-    top: 50%;
-  }
-  to {
-    opacity: 0;
-    top: 0;
-  }
-}
-
 .modal {
   background: rgba(0, 0, 0, 0.6);
   position: fixed;
@@ -297,8 +240,7 @@ body {
 }
 
 .modal .modal-content {
-  background: var(--panel-color);
-  border: gray 1px solid;
+  background: blue;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -308,43 +250,9 @@ body {
   width: 250px;
 }
 
-.modal .modal-content form {
-  text-align: center;
-  margin-top: 2em;
-}
-
-.modal .modal-content form label {
-  display: block;
-  color: var(--font-color);
-  font-size: 1.2rem;
-  font-weight: 700;
-  font-family: arial, sans-serif;
-}
-
-.modal .modal-content form button {
-  margin-top: 1em;
-  background: var(--bg-color);
-  color: var(--font-color);
-  font-family: arial, sans-serif;
-  font-weight: 700;
-  padding: 0.5em;
-  border-radius: 5px;
-}
-
-.modal .modal-content form button:hover {
-  cursor: pointer;
-}
-
 .modal #modal-close {
-  display: inline-block;
   position: absolute;
   top: 0;
-  right: 0;
-  margin-right: 0.5em;
-  z-index: 3;
-}
-
-.modal #modal-close:hover {
-  cursor: pointer;
+  left: 0;
 }
 /*# sourceMappingURL=main.css.map */
