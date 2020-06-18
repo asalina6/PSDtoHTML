@@ -40,6 +40,7 @@
             text-decoration: none;
             display: inline-block;
             border:1px solid white;
+            transition:transform 300ms ease-out 0s;
             &--quote {
                 background: var(--quote-color);
                 box-shadow: var(--box-shadow);
@@ -47,6 +48,9 @@
             &--learn {
                 background: var(--learn-color);
                 margin-left: 1em;
+            }
+            &:hover{
+                transform:scale(1.1);
             }
         }
     }

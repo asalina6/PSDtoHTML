@@ -93,12 +93,19 @@ body {
 .panel header nav .nav-list .nav-list__item .nav-list__link::after {
   content: ' ';
   display: block;
-  height: 5px;
-  background: red;
-  color: red;
+  width: 0%;
+  height: 0px;
+  background: var(--font-color);
   position: absolute;
   bottom: 0;
   left: 0;
+  -webkit-transition: height 300ms ease-out 0s, width 300ms ease-out 0s;
+  transition: height 300ms ease-out 0s, width 300ms ease-out 0s;
+}
+
+.panel header nav .nav-list .nav-list__item .nav-list__link:hover::after {
+  height: 3px;
+  width: 100%;
 }
 
 .panel header .toggle-light {
@@ -197,6 +204,10 @@ body {
   text-decoration: none;
   display: inline-block;
   border: 1px solid white;
+  -webkit-transition: -webkit-transform 300ms ease-out 0s;
+  transition: -webkit-transform 300ms ease-out 0s;
+  transition: transform 300ms ease-out 0s;
+  transition: transform 300ms ease-out 0s, -webkit-transform 300ms ease-out 0s;
 }
 
 .panel .text-box .btn--quote {
@@ -208,6 +219,11 @@ body {
 .panel .text-box .btn--learn {
   background: var(--learn-color);
   margin-left: 1em;
+}
+
+.panel .text-box .btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .panel .background-image {
@@ -294,6 +310,7 @@ body {
   height: 100%;
   width: 100%;
   z-index: 2;
+  display: none;
 }
 
 .modal .modal-content {
