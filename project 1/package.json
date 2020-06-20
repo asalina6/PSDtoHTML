@@ -2,15 +2,21 @@
   "name": "dribble1",
   "version": "1.0.0",
   "description": "dribble project",
-  "main": "index.html",
+  "main": "app.js",
   "dependencies": {
-    "css-reset-and-normalize-sass": "^0.1.2",
-    "normalize.css": "^8.0.1",
-    "reset-css": "^5.0.1"
+    "@sendgrid/mail": "^7.2.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.10"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "nodemon": "^2.0.4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [
     "dribble",

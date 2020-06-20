@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+@import '_reset.scss';
+@import '_normalize.scss';
+
+
 :root {
     --font-color: rgb(41, 38, 182);
     --bg-color:rgb(225, 237, 252);
